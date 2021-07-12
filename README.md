@@ -51,7 +51,7 @@ This project was made with the help of [GitHub Copilot](https://copilot.github.c
 
 ## Todo
 
-[ ] Add support for files
+- [ ] Add support for files
 
 ## Issues
 
