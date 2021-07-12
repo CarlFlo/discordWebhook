@@ -43,13 +43,15 @@ This module aims to make it easy to interact with discord through a webhook.
 	})
 
 	webhook.Send()
-
 ```
-
 
 ## GitHub Copilot
 
 This project was made with the help of [GitHub Copilot](https://copilot.github.com/).
+
+## Todo
+
+[ ] Add support for files
 
 ## Issues
 
