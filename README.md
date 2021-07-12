@@ -1,6 +1,6 @@
 # Discord Webhook
 
-This module aims to make it easy to interact with discord through a webhook.
+This module aims to make it both simple and easy to interact with discord through a webhook.
 
 
 ## Usage
@@ -41,6 +41,12 @@ This module aims to make it easy to interact with discord through a webhook.
 			Icon_url: "https://www.tiny_footer_icon.png",
 		},
 	})
+
+    // Allows you to set the username
+    webhook.SetUsername("Example username")
+
+    // Allows you to set the avatar by providing an image URL
+    webhook.SetAvatar("https://www.link_to_image.png")
 
 	webhook.Send()
 ```

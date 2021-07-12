@@ -17,8 +17,10 @@ type Webhooks struct {
 }
 
 type WebhookParams struct {
-	Content string  `json:"content,omitempty"`
-	Embeds  []Embed `json:"embeds,omitempty"`
+	Content    string  `json:"content,omitempty"`
+	Embeds     []Embed `json:"embeds,omitempty"`
+	Username   string  `json:"username,omitempty"`
+	Avatar_url string  `json:"avatar_url,omitempty"`
 }
 
 type Embed struct {
@@ -61,6 +63,14 @@ func (wh *Webhooks) AddWebhook(webhooks string) {
 	}
 
 	wh.webhooksUrls = append(wh.webhooksUrls, url)
+}
+
+func (wh *Webhooks) SetUsername(username string) {
+	wh.webhookParams.Username = username
+}
+
+func (wh *Webhooks) SetAvatar(Avatar_url string) {
+	wh.webhookParams.Avatar_url = Avatar_url
 }
 
 func (wh *Webhooks) SetContent(newContent string) {
