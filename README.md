@@ -45,6 +45,9 @@ webhook.AddEmbed(discordWebhook.Embed{
 	}, Image: discordWebhook.EmbedImage{
 		Url: "URL to an image",
 	},
+	Thumbnail: discordWebhook.EmbedThumbnail{
+		Url: "Thumbnail URL here",
+	},
 	Timestamp: discordWebhook.GetCurrentTimestamp(), // Use this method to generate a timestamp for the current time
 	Footer: discordWebhook.EmbedFooter{
 		Text:     "Footer text",

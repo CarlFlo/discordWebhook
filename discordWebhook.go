@@ -24,15 +24,16 @@ type WebhookParams struct {
 }
 
 type Embed struct {
-	Title       string       `json:"title,omitempty"`
-	Description string       `json:"description,omitempty"`
-	Url         string       `json:"url,omitempty"`
-	Color       int          `json:"clor,omitempty"`
-	Author      EmbedAuthor  `json:"author,omitempty"`
-	Fields      []EmbedField `json:"fields,omitempty"`
-	Image       EmbedImage   `json:"image,omitempty"`
-	Timestamp   string       `json:"timestamp,omitempty"`
-	Footer      EmbedFooter  `json:"footer,omitempty"`
+	Title       string         `json:"title,omitempty"`
+	Description string         `json:"description,omitempty"`
+	Url         string         `json:"url,omitempty"`
+	Color       int            `json:"clor,omitempty"`
+	Author      EmbedAuthor    `json:"author,omitempty"`
+	Fields      []EmbedField   `json:"fields,omitempty"`
+	Image       EmbedImage     `json:"image,omitempty"`
+	Thumbnail   EmbedThumbnail `json:"thumbnail,omitempty"`
+	Timestamp   string         `json:"timestamp,omitempty"`
+	Footer      EmbedFooter    `json:"footer,omitempty"`
 }
 
 type EmbedAuthor struct {
@@ -47,6 +48,10 @@ type EmbedField struct {
 }
 
 type EmbedImage struct {
+	Url string `json:"url,omitempty"`
+}
+
+type EmbedThumbnail struct {
 	Url string `json:"url,omitempty"`
 }
 
