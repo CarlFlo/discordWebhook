@@ -5,6 +5,14 @@ This module aims to make it both simple and easy to interact with discord throug
 
 ## Usage
 
+Here is some example code to get started
+
+Each of the variable in the **embed** is optional. 
+Meaning that it is fine to only have a *title* and *description*.
+
+For images so are only png files tested.
+Additionally, the URL's must start with **https://www.** or else discord wont accept the message
+
 ```go
 var webhook discordWebhook.Webhooks
 
@@ -12,7 +20,8 @@ var webhook discordWebhook.Webhooks
 webhook.AddWebhook("https://discord.com/api/webhooks/...")
 webhook.AddWebhook("https://discord.com/api/webhooks/...")
 
-// Below so are you able to add a message and embed. It's aesthetically pleasing to only pick one as the content message will appear above the embed
+// Below so are you able to add a message and embed. 
+// It is aesthetically pleasing to only pick one.
 
 // The content will look like a normal discord message. The best for simple messages
 webhook.SetContent("Text here will look like a normal discord message")
