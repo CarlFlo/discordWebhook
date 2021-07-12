@@ -11,7 +11,7 @@ Each of the variable in the **embed** is optional.
 Meaning that it is fine to only have a *title* and *description*.
 
 For images so are only png files tested.
-Additionally, the URL's must start with **https://www.** or else discord wont accept the message
+Additionally, the URL's must start with **https://** or else Discord wont accept the message.
 
 ```go
 var webhook discordWebhook.Webhooks
@@ -41,7 +41,7 @@ webhook.AddEmbed(discordWebhook.Embed{
 	Author: discordWebhook.Author{
 		Name:     "Author name",
 		Url:      "URL that will make the name clickable",
-		Icon_url: "Author image icon",
+		Icon_url: "Author image icon URL",
 	}, Image: discordWebhook.Image{
 		Url: "URL to an image",
 	},
