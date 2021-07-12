@@ -31,22 +31,22 @@ webhook.AddEmbed(discordWebhook.Embed{
 	Title:       "Here is the title",
 	Description: "Here is a description for the embed",
 	Color:       0x58b9ff, // Hex color
-	Fields: []discordWebhook.Field{{
+	Fields: []discordWebhook.EmbedField{{
 		Name:  "Field 1",
 		Value: "Some text for the first field",
 	}, {
 		Name:  "Field 2",
 		Value: "Some text for the second field",
 	}},
-	Author: discordWebhook.Author{
+	Author: discordWebhook.EmbedAuthor{
 		Name:     "Author name",
 		Url:      "URL that will make the name clickable",
 		Icon_url: "Author image icon URL",
-	}, Image: discordWebhook.Image{
+	}, Image: discordWebhook.EmbedImage{
 		Url: "URL to an image",
 	},
-	Timestamp: discordWebhook.GetCurrentTimestamp(),
-	Footer: discordWebhook.Footer{
+	Timestamp: discordWebhook.GetCurrentTimestamp(), // Use this method to generate a timestamp for the current time
+	Footer: discordWebhook.EmbedFooter{
 		Text:     "Footer text",
 		Icon_url: "URL to footer icon",
 	},

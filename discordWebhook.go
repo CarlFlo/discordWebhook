@@ -24,33 +24,33 @@ type WebhookParams struct {
 }
 
 type Embed struct {
-	Title       string  `json:"title,omitempty"`
-	Description string  `json:"description,omitempty"`
-	Url         string  `json:"url,omitempty"`
-	Color       int     `json:"clor,omitempty"`
-	Author      Author  `json:"author,omitempty"`
-	Fields      []Field `json:"fields,omitempty"`
-	Image       Image   `json:"image,omitempty"`
-	Timestamp   string  `json:"timestamp,omitempty"`
-	Footer      Footer  `json:"footer,omitempty"`
+	Title       string       `json:"title,omitempty"`
+	Description string       `json:"description,omitempty"`
+	Url         string       `json:"url,omitempty"`
+	Color       int          `json:"clor,omitempty"`
+	Author      EmbedAuthor  `json:"author,omitempty"`
+	Fields      []EmbedField `json:"fields,omitempty"`
+	Image       EmbedImage   `json:"image,omitempty"`
+	Timestamp   string       `json:"timestamp,omitempty"`
+	Footer      EmbedFooter  `json:"footer,omitempty"`
 }
 
-type Author struct {
+type EmbedAuthor struct {
 	Name     string `json:"name,omitempty"`
 	Url      string `json:"url,omitempty"`
 	Icon_url string `json:"icon_url,omitempty"`
 }
 
-type Field struct {
+type EmbedField struct {
 	Name  string `json:"name,omitempty"`
 	Value string `json:"value,omitempty"`
 }
 
-type Image struct {
+type EmbedImage struct {
 	Url string `json:"url,omitempty"`
 }
 
-type Footer struct {
+type EmbedFooter struct {
 	Text     string `json:"text,omitempty"`
 	Icon_url string `json:"icon_url,omitempty"`
 }
