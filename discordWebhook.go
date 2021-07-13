@@ -116,7 +116,7 @@ func (wh *Webhooks) Send() {
 		// If statuscode is 400
 		if resp.StatusCode == 400 {
 			malm.Error("400 Bad Request")
+			return
 		}
-
 	}
 }
