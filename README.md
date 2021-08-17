@@ -16,17 +16,17 @@ Additionally, the URL's must start with **https://** or else Discord wont accept
 ```go
 var webhook discordWebhook.Webhooks
 
-// You're able to add as many webhooks as you like
+// You're able to add as many webhooks as you want.
 webhook.AddWebhook("https://discord.com/api/webhooks/...")
 webhook.AddWebhook("https://discord.com/api/webhooks/...")
 
 // Below so are you able to add a message and embed. 
-// It is aesthetically pleasing to only pick one.
+// It looks the best to only pick one.
 
 // The content will look like a normal discord message. The best for simple messages
 webhook.SetContent("Text here will look like a normal discord message")
 
-// Adds an embed to the message. Most sutable for more 'complex' messages
+// Alternatively, for more complex messages, use an embed instead.
 webhook.AddEmbed(discordWebhook.Embed{
 	Title:       "Here is the title",
 	Description: "Here is a description for the embed",
