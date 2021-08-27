@@ -94,7 +94,7 @@ func (wh *Webhooks) Send() {
 
 	// Prepares the content of the message.
 	jsonContent, _ := json.Marshal(wh.webhookParams)
-	buffer := bytes.NewBuffer(jsonContent)
+	body := ioutil.NopCloser(bytes.NewBuffer(jsonContent))
 
 	for _, url := range wh.webhooksUrls {
 
@@ -104,16 +104,16 @@ func (wh *Webhooks) Send() {
 			Header: http.Header{
 				"Content-Type": []string{"application/json"},
 			},
-			Body: ioutil.NopCloser(buffer),
+			Body: body,
 		}
 
 		resp, err := http.DefaultClient.Do(req)
 		if err != nil {
 			malm.Error(err.Error())
+			return
 		}
 		defer resp.Body.Close()
 
-		// If statuscode is 400
 		if resp.StatusCode == 400 {
 			malm.Error("400 Bad Request")
 			return
