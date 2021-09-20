@@ -27,7 +27,7 @@ type Embed struct {
 	Title       string         `json:"title,omitempty"`
 	Description string         `json:"description,omitempty"`
 	Url         string         `json:"url,omitempty"`
-	Color       int            `json:"clor,omitempty"`
+	Color       int            `json:"color,omitempty"`
 	Author      EmbedAuthor    `json:"author,omitempty"`
 	Fields      []EmbedField   `json:"fields,omitempty"`
 	Image       EmbedImage     `json:"image,omitempty"`

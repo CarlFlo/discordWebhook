@@ -74,7 +74,3 @@ This project was made with the help of [GitHub Copilot](https://copilot.github.c
 - [X] Support for embeds
 - [ ] Support for multiple embedded images
 - [ ] Support for files
-
-## Issues
-
-* Setting the color does not work. It defaults to black
